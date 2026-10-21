@@ -71,4 +71,4 @@ Por defecto usa **simuladores**, así que se puede probar todo sin hardware.
 - Sin guiado (PHD2), plate solving, flats automáticos, ni fotometría en línea todavía.
 - No hay vista previa de imagen en la GUI; los FITS se guardan en el servidor.
 - La secuencia no se reanuda sola tras cerrarse por clima.
-- Las coordenadas del sitio en la configuración son aproximadas: **verifíquelas**.
+- Las coordenadas del sitio (5°33'N, 73°21'O, 2750 m) provienen del usuario: confirmar con las oficiales.

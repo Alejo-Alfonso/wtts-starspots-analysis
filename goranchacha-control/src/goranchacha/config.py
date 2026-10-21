@@ -10,10 +10,10 @@ from pydantic import BaseModel, Field
 
 class SiteConfig(BaseModel):
     name: str = "Observatorio Astronómico Goranchacha (UPTC)"
-    # Valores aproximados de Tunja: VERIFICAR con las coordenadas oficiales del sitio.
-    latitude_deg: float = 5.5353
-    longitude_deg: float = -73.3678  # este positivo
-    elevation_m: float = 2782.0
+    # 5°33'N, 73°21'W, 2750 m (dato del usuario; confirmar con coordenadas oficiales).
+    latitude_deg: float = 5.55
+    longitude_deg: float = -73.35  # este positivo, oeste negativo
+    elevation_m: float = 2750.0
     observer: str = "Grupo de Astronomía UPTC"
     telescope: str = "Goranchacha"
     instrument: str = "CCD"

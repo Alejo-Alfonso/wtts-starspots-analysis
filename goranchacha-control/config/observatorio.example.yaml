@@ -1,10 +1,10 @@
 # Copie a observatorio.yaml y ajuste. Ver README.md.
 site:
   name: "Observatorio Astronómico Goranchacha (UPTC)"
-  # VERIFICAR con las coordenadas oficiales (valores aproximados de Tunja)
-  latitude_deg: 5.5353
-  longitude_deg: -73.3678      # este = positivo, oeste = negativo
-  elevation_m: 2782
+  # 5°33'N, 73°21'W, 2750 m (dato del usuario)
+  latitude_deg: 5.55
+  longitude_deg: -73.35        # este = positivo, oeste = negativo
+  elevation_m: 2750
   observer: "Grupo de Astronomía UPTC"
   telescope: "Goranchacha"
   instrument: "CCD"
