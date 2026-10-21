@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "goranchacha-control"
+version = "0.1.0"
+description = "Sistema de control del Observatorio Astronómico Goranchacha (UPTC): servidor + cliente de escritorio, ASCOM/Alpaca"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "astropy",
+    "pydantic>=2",
+    "pyyaml",
+    "httpx",
+    "fastapi",
+    "uvicorn",
+]
+
+[project.optional-dependencies]
+gui = ["PySide6-Essentials"]
+dev = ["pytest"]
+
+[project.scripts]
+goranchacha-server = "goranchacha.server.__main__:main"
+goranchacha-gui = "goranchacha.gui.__main__:main"
+goranchacha-user = "goranchacha.auth:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
