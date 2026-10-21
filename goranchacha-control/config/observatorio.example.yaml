@@ -1,0 +1,41 @@
+# Copie a observatorio.yaml y ajuste. Ver README.md.
+site:
+  name: "Observatorio Astronómico Goranchacha (UPTC)"
+  # 5°33'N, 73°21'W, 2750 m (dato del usuario)
+  latitude_deg: 5.55
+  longitude_deg: -73.35        # este = positivo, oeste = negativo
+  elevation_m: 2750
+  observer: "Grupo de Astronomía UPTC"
+  telescope: "Goranchacha"
+  instrument: "CCD"
+
+data_dir: ./datos              # imágenes FITS, bitácora, usuarios
+poll_interval_s: 5
+
+safety:
+  max_wind_ms: 12
+  max_gust_ms: 15
+  max_humidity_pct: 85
+  min_dewpoint_margin_c: 2
+  max_cloud_pct: 70
+  sun_altitude_open_limit_deg: -6
+  safe_hold_minutes: 10        # tiempo seguro continuo antes de permitir abrir
+
+devices:
+  backend: simulator           # cambiar a "alpaca" para equipos reales
+  time_scale: 1.0              # solo simulador
+  filter_names: [L, B, V, R, I]
+  # alpaca:                    # un bloque por equipo (ASCOM Remote / Alpaca nativo)
+  #   mount:       {url: "http://127.0.0.1:11111", device_number: 0}
+  #   camera:      {url: "http://127.0.0.1:11111", device_number: 0}
+  #   filterwheel: {url: "http://127.0.0.1:11111", device_number: 0}
+  #   focuser:     {url: "http://127.0.0.1:11111", device_number: 0}
+  #   dome:        {url: "http://127.0.0.1:11111", device_number: 0}
+  #   weather:     {url: "http://127.0.0.1:11111", device_number: 0}
+
+server:
+  host: 127.0.0.1              # 0.0.0.0 solo con TLS (ssl_certfile/ssl_keyfile)
+  port: 8443
+  # ssl_certfile: /ruta/cert.pem
+  # ssl_keyfile: /ruta/key.pem
+  token_ttl_minutes: 480
